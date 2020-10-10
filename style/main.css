@@ -1,0 +1,79 @@
+@import url(reset.css);
+body {
+    background-image: url(images/space.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.space {
+    margin: 300px auto;
+}
+
+.earth {
+    width: 250px;
+    height: 250px;
+    margin: 300px auto 0;
+    border-radius: 50%;
+    background-image: url(images/earth.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-style: preserve-3d;
+}
+
+.orbit {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 0.5px solid rgb(175, 175, 175);
+    position: absolute;
+    top: -70px;
+    left: -75px;
+    right: 0;
+    bottom: 0;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) rotateY(0deg) rotateZ(180deg);
+}
+
+.moon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(images/moon.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation-name: orbiting;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    transform-style: preserve-3d;
+    transform: rotateZ(0deg) translate(200px) rotateY(90deg) rotateX(90deg);
+    box-shadow: inset -5px -20px 17px 9px rgba(0, 0, 0, 0.9)
+}
+
+@keyframes orbiting {
+    0% {
+        box-shadow: inset -5px -20px 17px 9px rgba(0, 0, 0, 0.9)
+    }
+    25% {
+        box-shadow: inset 0px 1px 17px 4px rgba(0, 0, 0, 0.9);
+    }
+    50% {
+        box-shadow: inset -3px 20px 17px 9px rgba(0, 0, 0, 0.9)
+    }
+    75% {
+        box-shadow: inset -20px -2px 17px 16px rgba(0, 0, 0, 0.9)
+    }
+    100% {
+        transform: rotateZ(360deg) translate(200px) rotateY(90deg) rotateX(450deg);
+        box-shadow: inset -5px -20px 17px 9px rgba(0, 0, 0, 0.9)
+    }
+}
