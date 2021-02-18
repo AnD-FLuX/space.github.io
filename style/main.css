@@ -1,6 +1,6 @@
 @import url(reset.css);
 body {
-    background: url("./images/space.jpg") no-repeat center center fixed;
+    background: no-repeat center center fixed url("./images/space.jpg") ;
     background-size: cover;
 }
 
